@@ -14,6 +14,7 @@
         style="@style/AppIntroDefaultHeading"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toTopOf="@+id/description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/midline"
@@ -36,12 +37,14 @@
         android:id="@+id/description"
         style="@style/AppIntroDefaultText"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:autoLink="web"
+        android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/midline"
         app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintVertical_chainStyle="spread"
         tools:text="This is a demo of the AppIntro Library" />
 
     <androidx.constraintlayout.widget.Guideline

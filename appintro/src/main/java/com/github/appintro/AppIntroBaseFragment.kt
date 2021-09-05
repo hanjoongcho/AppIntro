@@ -2,6 +2,7 @@ package com.github.appintro
 
 import android.graphics.drawable.Animatable
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -122,6 +123,8 @@ abstract class AppIntroBaseFragment : Fragment(), SlideSelectionListener, SlideB
         } else {
             mainLayout?.setBackgroundColor(defaultBackgroundColor)
         }
+        
+        descriptionText.movementMethod = ScrollingMovementMethod()
 
         return view
     }
